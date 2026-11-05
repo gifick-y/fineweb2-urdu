@@ -1,0 +1,37 @@
+FineWeb-2 Urdu subset manifest: urd_Arab
+Generated (UTC): 2026-11-02T13:44:17Z
+Source: HuggingFaceFW/fineweb-2 (Hugging Face datasets)
+Note: no content was modified or translated. Files are byte-identical to the source parquet.
+
+TOTAL rows: 4,858,678
+TOTAL bytes: 6,940,104,185
+EXPECTED rows: train=4,809,542 test=49,136 -> MATCH
+
+SOURCE PARQUET FILES (sha256 of the original file)
+path | split | bytes | rows | sha256
+test/000_00000.parquet | test | 71,344,862 | 49,136 | 277ecdeebc1b9327a684243897afc3a8acd1a44774b5c6cc67afc6899298e058
+train/000_00000.parquet | train | 4,844,148,326 | 3,262,000 | a3e64b92cb606bca9ef522bb82d15828beef4825e8998bb43f6e142cc947338d
+train/001_00000.parquet | train | 2,024,610,997 | 1,547,542 | a356fe5d478be9bbb3887cbc1ca338f8455e071041352f2023ac7a54799375e2
+
+ZIP PARTS (STORE / no compression, each <= 2 GB)
+zip | bytes | sha256 | contents | source byte range
+fineweb2_urd_Arab_part01.zip | 71,345,024 | bf2a3ed2d7787c161ab231d475737380a7ed03da44b6bc00507e77a73c340f67 | test/000_00000.parquet | 0-71344862
+fineweb2_urd_Arab_part02.zip | 1,900,000,178 | 674faa4d12012df793047493c0465c9216f933b0b77b2c4ae783ab5833e2767a | train/000_00000.parquet.part01 | 0-1900000000
+fineweb2_urd_Arab_part03.zip | 1,900,000,178 | 6da672c6b3f5d6f4f4ca0f9399216fde3f141ca7418628d93eca0c55afc2e427 | train/000_00000.parquet.part02 | 1900000000-3800000000
+fineweb2_urd_Arab_part04.zip | 1,044,148,504 | 4737ab70d15e64adb80d116d04207c513abb8106b5f98e7030304d3ebd35be81 | train/000_00000.parquet.part03 | 3800000000-4844148326
+fineweb2_urd_Arab_part05.zip | 1,900,000,178 | 956fc32ff60a902078e8539516a65a4c66415480fd221446054c499a9a45d063 | train/001_00000.parquet.part01 | 0-1900000000
+fineweb2_urd_Arab_part06.zip | 124,611,175 | 881441783c4003438cc903adb6f5075a5cdec4b36e1fc9c81c283655e8091248 | train/001_00000.parquet.part02 | 1900000000-2024610997
+
+REASSEMBLY INSTRUCTIONS
+Whole-file zips: unzip normally.
+Chunked files: concatenate the .partNN members in order, e.g.:
+  cat 000_00000.parquet.part01 000_00000.parquet.part02 000_00000.parquet.part03 > 000_00000.parquet
+  cat 001_00000.parquet.part01 001_00000.parquet.part02 > 001_00000.parquet
+
+ZIP PART SHA256 (of the .zip file itself)
+  fineweb2_urd_Arab_part01.zip  bf2a3ed2d7787c161ab231d475737380a7ed03da44b6bc00507e77a73c340f67
+  fineweb2_urd_Arab_part02.zip  674faa4d12012df793047493c0465c9216f933b0b77b2c4ae783ab5833e2767a
+  fineweb2_urd_Arab_part03.zip  6da672c6b3f5d6f4f4ca0f9399216fde3f141ca7418628d93eca0c55afc2e427
+  fineweb2_urd_Arab_part04.zip  4737ab70d15e64adb80d116d04207c513abb8106b5f98e7030304d3ebd35be81
+  fineweb2_urd_Arab_part05.zip  956fc32ff60a902078e8539516a65a4c66415480fd221446054c499a9a45d063
+  fineweb2_urd_Arab_part06.zip  881441783c4003438cc903adb6f5075a5cdec4b36e1fc9c81c283655e8091248

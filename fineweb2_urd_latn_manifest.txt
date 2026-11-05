@@ -1,0 +1,26 @@
+FineWeb-2 Urdu subset manifest: urd_Latn
+Generated (UTC): 2026-11-02T13:44:28Z
+Source: HuggingFaceFW/fineweb-2 (Hugging Face datasets)
+Note: no content was modified or translated. Files are byte-identical to the source parquet.
+
+TOTAL rows: 69,878
+TOTAL bytes: 129,971,538
+EXPECTED rows: train=69,321 test=557 -> MATCH
+
+SOURCE PARQUET FILES (sha256 of the original file)
+path | split | bytes | rows | sha256
+test/000_00000.parquet | test | 1,086,819 | 557 | 9e5754cb3cab48c540e9348b6dcacd01acb8cb4f2eda3209d22149491f64e62b
+train/000_00000.parquet | train | 128,884,719 | 69,321 | 82937843bfb27bd70f0f0c5914b25c46739f95adb4f17f91a80a7fbccff173bd
+
+ZIP PARTS (STORE / no compression, each <= 2 GB)
+zip | bytes | sha256 | contents | source byte range
+fineweb2_urd_Latn_part01.zip | 1,086,981 | 6f51791a46d7c82944bc906683a43f07c43e21d3dd42395175feaa59e505fb2b | test/000_00000.parquet | 0-1086819
+fineweb2_urd_Latn_part02.zip | 128,884,883 | 05a923ccb45ee8c54083cadfb9be9866cc81ecd0acf479ae11882d20b1b90a0c | train/000_00000.parquet | 0-128884719
+
+REASSEMBLY INSTRUCTIONS
+Whole-file zips: unzip normally.
+Chunked files: concatenate the .partNN members in order, e.g.:
+
+ZIP PART SHA256 (of the .zip file itself)
+  fineweb2_urd_Latn_part01.zip  6f51791a46d7c82944bc906683a43f07c43e21d3dd42395175feaa59e505fb2b
+  fineweb2_urd_Latn_part02.zip  05a923ccb45ee8c54083cadfb9be9866cc81ecd0acf479ae11882d20b1b90a0c
